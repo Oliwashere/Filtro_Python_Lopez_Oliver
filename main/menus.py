@@ -101,8 +101,11 @@ def menu_bonificaciones():
     opcb=verif_opcb("----> ",1,4)
     return opcb 
 
+def menu_crear_usuario(archivo):
+    crear_usuario(archivo)
 
-
+def menu_mostrar_usuario(archivo):
+    mostrar_usuario(archivo)
 
 
 
