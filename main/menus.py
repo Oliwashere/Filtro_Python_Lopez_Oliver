@@ -103,15 +103,43 @@ def menu_bonificaciones():
 
 def menu_crear_usuario(archivo):
     crear_usuario(archivo)
+    print("1. Salir")
+    opcS=verif_opcSalir("----> ",1,1)
+    return opcS
 
 def menu_mostrar_usuario(archivo):
-    cargar_usuario(archivo)
     mostrar_usuario(archivo)
+    print("1. Salir")
+    opcS=verif_opcSalir("----> ",1,1)
+    return opcS
 
 def menu_eliminar_usuario(archivo):
     eliminar_usuario(archivo)
+    print("1. Salir")
+    opcS=verif_opcSalir("----> ",1,1)
+    return opcS
 
+def menu_editar_usuario(archivo):
+    editar_usuario(archivo)
+    print("1. Salir")
+    opcS=verif_opcSalir("----> ",1,1)
+    return opcS
 
+def menu_crear_servicio(archivo):
+    cargar_servicio(archivo)
+    print("1. Salir")
+    opcS=verif_opcSalir("----> ",1,1)
+    return opcS
 
+def menu_ver_servicios(archivo):
+    mostrar_servicio(archivo)
+    print("1. Salir")
+    opcS=verif_opcSalir("----> ",1,1)
+    return opcS
 
-
+def menu_eliminar_servicios(archivo):
+    eliminar_servicio(archivo)
+    print("1. Salir")
+    opcS=verif_opcSalir("----> ",1,1)
+    return opcS
+        

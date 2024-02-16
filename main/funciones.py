@@ -26,6 +26,18 @@ def verif_opca(enunciado,bajo,top):
         except ValueError:
             print("Por favor, ingrese una opción válida")                
 
+def verif_opcSalir(enunciado,bajo,top):
+    while True:
+        try: 
+            opcion=int(input(enunciado))
+            if opcion >=bajo and opcion<=top:
+                return opcion
+            else:
+                print(f"Por favor, ingrese una opción válida entre ({bajo}y{top})")
+        except ValueError:
+            print("Por favor, ingrese una opción válida")                
+
+
 def verif_opcr(enunciado,bajo,top):
     while True:
         try: 
@@ -283,6 +295,26 @@ def verif_opcServicios(enunciado, bajo, top):
         except ValueError:
             print("Por favor, ingrese una opción válida") 
 
+def eliminar_servicio(archivo):
+    datos = cargar_servicio(archivo)
+
+    if not datos:
+        print("No hay servicios registrados para eliminar.")
+        return
+
+    mostrar_servicio(archivo)
+
+    try:
+        numero_lista = int(input("Ingresa el id del usuario que deseas eliminar: "))
+        if 1 <= numero_lista <= len(datos):
+            lista_eliminada = datos.pop(numero_lista - 1)
+            print(f"Servicio {lista_eliminada['servicio #']} eliminado exitosamente.")
+            guardar_servicio(archivo, datos)
+        else:
+            print("Id de servicio inválido.")
+    except ValueError:
+        print("Entrada inválida. Ingresa un número.")
+
 def crear_servicio(archivo2):
 
     datos = cargar_servicio(archivo2)
@@ -313,7 +345,8 @@ def crear_usuario(archivo,):
         "celular": input("Ingresa el número de celular: "),
         "fijo": input("Ingresa el número fijo: "),
         "servicio": "none",
-        "tiempo": input("Ingresa s/n si el usuario lleva mas de 10 años con la empresa")
+        "tiempo": input("Ingresa s/n si el usuario lleva mas de 10 años con la empresa"),
+        "categoria": "none"
     }
 
     datos.append(nuevo_dato)
