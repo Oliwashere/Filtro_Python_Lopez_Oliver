@@ -105,9 +105,11 @@ def menu_crear_usuario(archivo):
     crear_usuario(archivo)
 
 def menu_mostrar_usuario(archivo):
+    cargar_usuario(archivo)
     mostrar_usuario(archivo)
 
-
+def menu_eliminar_usuario(archivo):
+    eliminar_usuario(archivo)
 
 
 

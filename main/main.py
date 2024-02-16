@@ -14,8 +14,9 @@ while True:
                 clear_screen()
                 menu_crear_usuario("usuarios.json")
             elif opcr==2:
-                clear_screen()
-                menu_mostrar_usuario("usuarios.json")    
+                menu_mostrar_usuario("usuarios.json")
+            elif opcr==4:
+                menu_eliminar_usuario("usuarios.json")        
         elif opca==5:
             clear_screen()
             opcs=menu_servicios()
