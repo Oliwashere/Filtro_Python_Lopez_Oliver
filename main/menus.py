@@ -1,4 +1,4 @@
-from main.funciones import *
+from funciones import *
 
 def menu_principal():
     print("====|¡Bienvenido a la plataforma Movistar!|====")
