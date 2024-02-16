@@ -25,6 +25,14 @@ def menu_administrador():
     opca=verif_opca("----> ",1,7)
     return opca
 
+def info():
+    print("====|Información del programa|====")
+    print("")
+    print("")
+    print("1. Salir al menú principal")
+    opci=verif_opci("----> ",1,1)
+    return opci
+
 def menu_gest_u():
     print("====|Registro y Gestión de Usuarios|====")
     print("")

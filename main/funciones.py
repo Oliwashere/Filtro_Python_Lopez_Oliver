@@ -101,4 +101,15 @@ def verif_opcb(enunciado,bajo,top):
             else:
                 print(f"Por favor, ingrese una opción válida entre ({bajo}y{top})")
         except ValueError:
-            print("Por favor, ingrese una opción válida")                                               
+            print("Por favor, ingrese una opción válida")  
+
+def verif_opci(enunciado,bajo,top):
+    while True:
+        try: 
+            opcion=int(input(enunciado))
+            if opcion >=bajo and opcion<=top:
+                return opcion
+            else:
+                print(f"Por favor, ingrese una opción válida entre ({bajo}y{top})")
+        except ValueError:
+            print("Por favor, ingrese una opción válida")                                                           
